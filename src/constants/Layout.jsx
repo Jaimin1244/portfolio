@@ -5,11 +5,11 @@ import Projects from '../section/Projects';
 import Technologies from '../section/Technologies';
 import Footer from './Footer'
 import { useThemeStore } from '../store/useThemeStore';
+import ScrollToTop from '../components/ScrollToTop';
 
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-import ScrollToTop from '../components/ScrollToTop';
 
 const Layout = () => {
 

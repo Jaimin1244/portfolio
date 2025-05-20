@@ -1,5 +1,5 @@
-import { ExternalLink } from 'lucide-react'
-import React, { useState } from 'react'
+import { CircleX, ExternalLink, ScanEye } from 'lucide-react'
+import { useState } from 'react'
 
 const ProjectCrad = ({project}) => {
 
@@ -15,7 +15,7 @@ const ProjectCrad = ({project}) => {
             onClick={() => setIsOpen(true)}
             className="btn btn-sm btn-outline"
           >
-            Preview
+            Preview <ScanEye size={16}/>
           </button>
           <a
             href={project.link}
@@ -34,9 +34,8 @@ const ProjectCrad = ({project}) => {
           <div className="bg-base-100 rounded-xl p-4 w-[90%] h-[90%] relative">
             <button
               onClick={() => setIsOpen(false)}
-              className="btn btn-sm btn-circle absolute top-4 right-4"
-            >
-              ✕
+              className="absolute top-4 right-4"
+            ><CircleX />
             </button>
             <iframe
               src={project.link}

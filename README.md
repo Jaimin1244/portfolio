@@ -50,8 +50,8 @@ Start the dev server:
 
 ```bash
 npm run dev
-Open your browser at http://localhost:5173.
 ```
+Open your browser at http://localhost:5173.
 
 ## 🔍 Linting
 Check for code quality issues using:
@@ -65,8 +65,8 @@ Build the project for production:
 
 ```bash
 npm run build
-Preview the build locally:
 ```
+Preview the build locally:
 
 ## 🔧 Tech Stack
 - React 19
@@ -81,15 +81,12 @@ Preview the build locally:
 
 ## 📦 Deployment
 This project is ready for deployment on:
-Vercel
-Netlify
-GitHub Pages (with adapter)
+- Vercel
+- Netlify
+- GitHub Pages (with adapter)
 
 ## 🙌 Credits
 Inspired by modern web designs and interactive 3D portfolios like joanramosrefusta.com.
 
 ## 📄 License
 MIT License © 2025 Jaimin Patel
----
-
-Let me know if you'd like to include instructions for Three.js or specific pages (like About, Projects, Contact) or deployment setup for Vercel!

@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 export const useThemeStore = create((set) => ({
-    currentTheme : 'light',
+    currentTheme : 'lemonade',
     setTheme: (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
@@ -9,7 +9,7 @@ export const useThemeStore = create((set) => ({
     },
 
     initTheme: () => {
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'lemonade';
         document.documentElement.setAttribute('data-theme', savedTheme);
         set({currentTheme: savedTheme});
     },
