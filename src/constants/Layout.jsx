@@ -5,7 +5,6 @@ import Projects from '../section/Projects';
 import Technologies from '../section/Technologies';
 import Footer from './Footer'
 import { useThemeStore } from '../store/useThemeStore';
-import ScrollToTop from '../components/ScrollToTop';
 
 import { useEffect } from 'react';
 import Aos from 'aos';
@@ -29,9 +28,8 @@ const Layout = () => {
   return (
     <div className='flex flex-col min-h-screen'>
       <Navbar />
-      <ScrollToTop />
-
-      <div className='flex-1 mx-auto px-4 py-6 space-y-20 scroll-smooth w-full'>
+    
+    <div className='flex-1 mx-auto px-4 py-6 space-y-20 scroll-smooth w-full container'>
         <Home data-aos="fade-up" />
         <Technologies data-aos="fade-right" />
         <Projects data-aos="fade-left" />

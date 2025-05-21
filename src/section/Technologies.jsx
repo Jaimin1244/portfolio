@@ -12,9 +12,9 @@ const Technologies = (props) => {
       <p className="text-gray-400">Here are some of the tools and technologies I use regularly:</p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-white">
-        {skills.map((skill) => {
+        {skills.map((skill, index) => {
           return (
-            <div className="bg-gray-800 p-4 rounded-xl shadow hover:shadow-lg transition">{skill}</div>
+            <div key={index} className="bg-gray-800 p-4 rounded-xl shadow hover:shadow-lg transition">{skill}</div>
           );
         })}
       </div>
