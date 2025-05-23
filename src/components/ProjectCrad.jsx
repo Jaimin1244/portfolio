@@ -1,52 +1,44 @@
-import { CircleX, ExternalLink, ScanEye } from 'lucide-react'
-import { useState } from 'react'
+import { ExternalLink } from 'lucide-react'
 
-const ProjectCrad = ({project}) => {
-
-  const [isOpen, setIsOpen] = useState(false);
-
+const ProjectCard = ({ project }) => {
   return (
-    <>
-      <div className="rounded-xl border border-neutral-800 bg-base-200 shadow-md p-4 space-y-2">
-        <h2 className="text-lg font-semibold text-primary">{project.title}</h2>
-        <p className="text-sm text-neutral-400">{project.desc}</p>
-        <div className="flex justify-between items-center">
-          <button
-            onClick={() => setIsOpen(true)}
-            className="btn btn-sm btn-outline"
+    <div className="rounded-xl border border-neutral-800 bg-base-200 shadow-md p-4 space-y-2">
+      <h2 className="text-lg font-semibold text-primary">{project.title}</h2>
+      <p className="text-sm text-neutral-400">{project.desc}</p>
+
+      {/* Technology Badges */}
+      <div className="flex flex-wrap gap-2">
+        {project.tech?.map((tech, index) => (
+          <span
+            key={index}
+            className="badge badge-outline text-xs px-2 py-1 rounded-md border border-primary text-primary"
           >
-            Preview <ScanEye size={16}/>
-          </button>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-sm btn-outline"
-          >
-            View <ExternalLink size={16} />
-          </a>
-        </div>
+            {tech}
+          </span>
+        ))}
       </div>
 
-      {/* Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
-          <div className="bg-base-100 rounded-xl p-4 w-[90%] h-[90%] relative">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4"
-            ><CircleX />
-            </button>
-            <iframe
-              src={project.link}
-              title={project.title}
-              className="w-full h-full rounded-md border border-neutral-700"
-            ></iframe>
-          </div>
-        </div>
-      )}
-    </>
+      {/* Action Buttons */}
+      <div className="flex justify-between items-center pt-2">
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-sm btn-outline"
+        >
+          Source Code <ExternalLink size={16} />
+        </a>
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-sm btn-outline"
+        >
+          Live Demo <ExternalLink size={16} />
+        </a>
+      </div>
+    </div>
   )
 }
 
-export default ProjectCrad
+export default ProjectCard

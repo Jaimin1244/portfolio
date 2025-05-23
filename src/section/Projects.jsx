@@ -3,15 +3,35 @@ import ProjectCard from "../components/ProjectCrad";
 const projects = [
   {
     id: 1,
-    title: "Realtime Chat App",
+    title: "Chatty",
     desc: "Online chating app for text messages and images.",
-    link: "https://github.com/Jaimin1244/realtime-chat-app",
+    github: "https://github.com/Jaimin1244/realtime-chat-app",
+    link: "/notfound",
+    tech: ['React', 'Node.js', 'MongoDb', 'Tailwind CSS', 'Socket.io', 'Jwt Auth', 'Lucide Icons', 'React Hot Toast', 'Axios', 'Zustand'],
+  },
+   {
+    id: 2,
+    title: "ZenStay",
+    desc: "A complete hotel booking and managemt website for both HotelOwners and Customers.",
+    github: "https://github.com/Jaimin1244/ZenStay---A-Hotel-Booking-Management-System",
+    link: "/notfound",
+    tech: ['ASP.NET', 'Entity Framework', 'C#', 'Razor Pages', 'Ajax/jQuery'],
   },
   {
-    id: 2,
+    id: 3,
     title: "Khanban Board",
     desc: "A simple khanban board with the help of TailwindCss and SortableJs.",
+    github: "https://github.com/Jaimin1244/kanban-board",
     link: "https://kanban-board-flame-six.vercel.app/",
+    tech: ['HTML', 'Tailwind CSS', 'JavaScript', 'Sortable Js'],
+  },
+  {
+    id: 4,
+    title: "Saas Landing Page",
+    desc: "A simple khanban board with the help of TailwindCss and SortableJs.",
+    github: "https://github.com/Jaimin1244/SaasLandingPage",
+    link: "https://saas-landing-page-topaz-eight.vercel.app/",
+    tech: ['React', 'Tailwind CSS', 'Motion', 'React Icons'],
   },
 ];
 

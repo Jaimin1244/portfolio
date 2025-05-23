@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle';
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -12,17 +12,6 @@ const navItems = [
 
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState('home');
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Scroll effect for navbar style
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Scroll observer for active section tracking
   useEffect(() => {
@@ -56,12 +45,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div
-      className={`z-50 transition-all duration-300 ease-in-out bg-base-200 ${isScrolled
-        ? 'fixed top-0 left-0 right-0 shadow-lg'
-        : 'relative'
-        }`}
-    >
+    <div className='z-50 transition-all duration-300 ease-in-out bg-base-200 fixed top-0 left-0 right-0 shadow-lg'>
       <div className='navbar flex justify-between'>
         <div className='flex-1'>
           <Link to="/" className='text-xl font-bold'>
